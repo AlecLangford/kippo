@@ -50,7 +50,7 @@ class command_adduser(HoneyPotCommand):
             (O_Q, '        Favorite movie []: '),
             (O_Q, '        Other []: '),
             (O_Q, 'Is the information correct? [Y/n] '),
-            (O_O, 'Validating with Interpol...',),
+            (O_O, 'Validating with Interpol...\n',),
             (O_O, 'ERROR: Some of the information you entered is invalid\n'),
             (O_O, 'Deleting user `%(username)s\' ...\n'),
             (O_O, 'Deleting group `%(username)s\' (1001) ...\n'),
