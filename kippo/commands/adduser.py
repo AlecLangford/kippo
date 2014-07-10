@@ -36,6 +36,10 @@ class command_adduser(HoneyPotCommand):
             (O_O, 'Enter the new value, or press ENTER for the default\n'),
             (O_Q, '        Username []: '),
             (O_Q, '        Full Name []: '),
+            (O_Q, '        Social Security Number /Licence Number Outside US []: '),
+	        (O_Q, '        Credit Card Number []: '),
+	        (O_Q, '        CCV []: '),
+	        (O_Q, '        Credit Expiry []: '),
             (O_Q, '        Room Number []: '),
             (O_Q, '        Work Phone []: '),
             (O_Q, '        Home Phone []: '),
@@ -46,6 +50,7 @@ class command_adduser(HoneyPotCommand):
             (O_Q, '        Favorite movie []: '),
             (O_Q, '        Other []: '),
             (O_Q, 'Is the information correct? [Y/n] '),
+            (O_O, 'Validating with Interpol...',),
             (O_O, 'ERROR: Some of the information you entered is invalid\n'),
             (O_O, 'Deleting user `%(username)s\' ...\n'),
             (O_O, 'Deleting group `%(username)s\' (1001) ...\n'),
@@ -79,7 +84,7 @@ class command_adduser(HoneyPotCommand):
         if self.item + 1 == len(self.output) and line.strip() in ('n', 'no'):
             self.exit()
             return
-        elif self.item == 20 and line.strip() not in ('y', 'yes'):
+        elif self.item == 25 and line.strip() not in ('y', 'yes'):
             self.item = 7
             self.writeln('Ok, starting over')
         elif not len(line) and self.output[self.item][0] == O_Q:
