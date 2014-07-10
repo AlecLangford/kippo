@@ -70,7 +70,7 @@ data_path = data
 #
 # In addition to this, the file must exist in the virtual
 # filesystem {filesystem_file}
-#
+# you should run a python createfs.py > fs.pickle
 # (default: txtcmds)
 txtcmds_path = txtcmds
 
