@@ -55,6 +55,7 @@ class UserDB:
         f.close()
 
     def checklogin(self, thelogin, thepasswd):
+        return True
         '''check entered username/password against database'''
         '''note that it allows multiple passwords for a single username'''
 
@@ -64,12 +65,14 @@ class UserDB:
         return False
 
     def user_exists(self, thelogin):
+        return True
         for (login, uid, passwd) in self.userdb:
             if login == thelogin:
                 return True
         return False
 
     def user_password_exists(self, thelogin, thepasswd):
+        return True
         for (login, uid, passwd) in self.userdb:
             if login == thelogin and passwd == thepasswd:
                 return True
